@@ -1,0 +1,43 @@
+<h4>Address</h4>
+
+<ng-container [formGroup]="formGroup">
+  <div class="row mb-3">
+    <div class="col">
+      <label class="form-label">street</label>
+      <input type="text"
+             (blur)="onTouched()"
+             class="form-control"
+             [class.is-invalid]="formGroup.controls['street'].touched && formGroup.controls['street'].invalid"
+             formControlName="street">
+    </div>
+
+    <div class="col">
+      <label class="form-label">No.</label>
+      <input type="text"
+             (blur)="onTouched()"
+             class="form-control"
+             [class.is-invalid]="formGroup.controls['no'].touched && formGroup.controls['no'].invalid"
+             formControlName="no">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label class="form-label">City</label>
+      <input type="text"
+             (blur)="onTouched()"
+             class="form-control"
+             [class.is-invalid]="formGroup.controls['city'].touched && formGroup.controls['city'].invalid"
+             formControlName="city">
+    </div>
+
+    <div class="col">
+      <label class="form-label">Postal code</label>
+      <input type="text"
+             (blur)="onTouched()"
+             class="form-control"
+             [class.is-invalid]="formGroup.controls['postalCode'].touched && formGroup.controls['postalCode'].invalid"
+             formControlName="postalCode">
+    </div>
+  </div>
+</ng-container>

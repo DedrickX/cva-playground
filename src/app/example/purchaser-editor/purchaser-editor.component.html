@@ -1,0 +1,26 @@
+<h4>Purchaser</h4>
+
+<ng-container [formGroup]="formGroup">
+  <div class="row">
+    <div class="col">
+      <label class="form-label">Name</label>
+      <input type="text"
+             (blur)="onTouched()"
+             class="form-control"
+             [class.is-invalid]="formGroup.controls['name'].touched && formGroup.controls['name'].invalid"
+             formControlName="name">
+    </div>
+
+    <div class="col">
+      <label class="form-label">Email</label>
+      <input type="text"
+             (blur)="onTouched()"
+             class="form-control"
+             [class.is-invalid]="formGroup.controls['email'].touched && formGroup.controls['email'].invalid"
+             formControlName="email">
+    </div>
+  </div>
+
+  <app-address-editor class="mt-3" formControlName="address" (blur)="onTouched()">
+  </app-address-editor>
+</ng-container>
